@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+
+<h2>Top up</h2>
+<table>
+    <tbody>
+        <tr>
+            <td>Bank account </td>
+            <th>Stock Size</th>
+            <th>Price</th>
+            <th>Balance</th>
+        </tr>
+        <tr>
+            <td>{{ stock['symbol'] }}</td>
+            <td>{{ amount }}</td>
+            <td>{{ stock['price'] }}</td>
+            <td>{{ balance }}</td>
+        </tr>
+    </tbody>
+</table>
+    <form action="/add_cash" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="amount" placeholder="Amount" type="number" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit">ADD CASH</button>
+    </form>
+{% endblock %}

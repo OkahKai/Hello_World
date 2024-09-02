@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+{% block main %}
+    <h1>Account Details</h1>
+    <div>
+        <table>
+            <tr>
+                <td><b>Username</b></td>
+                <td>{{username}}</td>
+            </tr>
+            <tr>
+                <td><b>Cash</b></td>
+                <td>{{cash}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <form action="/password" method="get">
+            <button class="btn btn-primary" type="submit">Change Password</button>
+        </form>
+    </div>
+{% endblock %}
